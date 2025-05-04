@@ -12,7 +12,7 @@ interface MetaArgs {
 export default function useMetaArgs(args: MetaArgs) {
   useEffect(() => {
     const { title, description, keywords } = args;
-    
+
     // Update title
     if (title) {
       document.title = title;
@@ -20,7 +20,9 @@ export default function useMetaArgs(args: MetaArgs) {
 
     // Update meta description
     if (description) {
-      const metaDescription = document.querySelector('meta[name="description"]');
+      const metaDescription = document.querySelector(
+        'meta[name="description"]'
+      );
       if (metaDescription) {
         metaDescription.setAttribute("content", description);
       } else {
@@ -47,6 +49,20 @@ export default function useMetaArgs(args: MetaArgs) {
     return () => {
       if (title) {
         document.title = "TechPay";
+      }
+      if (description) {
+        const metaDescription = document.querySelector(
+          'meta[name="description"]'
+        );
+        if (metaDescription) {
+          metaDescription.remove();
+        }
+      }
+      if (keywords) {
+        const metaKeywords = document.querySelector('meta[name="keywords"]');
+        if (metaKeywords) {
+          metaKeywords.remove();
+        }
       }
     };
   }, [args.title, args.description, args.keywords, args]);
