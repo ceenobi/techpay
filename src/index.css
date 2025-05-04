@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
+}
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --paint-sky: #06bcfe;
+  --paint-white: #f6f6f6;
+  --paint-gray: #8e8e93;
+  --paint-darkGray: #768ba6;
+  --paint-black-50: #6d6d6d;
+}
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  scroll-behavior: smooth;
+}
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--font-inter);
+}
+
+.auth-bg {
+  background: #eff6ff80;
+}
