@@ -20,7 +20,7 @@ export default function ActionButton({
       type={type}
       disabled={loading || disabled}
       onClick={onClick}
-      className={`btn border-0 ${classname}`}
+      className={`btn ${classname}`}
     >
       {loading ? <span className="loading loading-spinner"></span> : text}
     </button>

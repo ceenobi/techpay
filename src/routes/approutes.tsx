@@ -1,5 +1,5 @@
 import { RouteObject } from "react-router";
-import { AuthLayout } from "../layouts";
+import { AuthLayout, DashboardLayout } from "../layouts";
 import {
   Register,
   Login,
@@ -9,6 +9,7 @@ import {
   ReactivateAccount,
   ReactivateAccountSuccess,
   VerifyEmail,
+  Home,
 } from "../pages";
 import { Suspense } from "react";
 import { Loader } from "../components";
@@ -87,6 +88,24 @@ const routes: RouteObject[] = [
         <ResetPassword />
       </Suspense>
     ),
+  },
+  {
+    path: "/",
+    element: (
+      <Suspense fallback={<Loader />}>
+        <DashboardLayout />
+      </Suspense>
+    ),
+    children: [
+      {
+        index: true,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Home />
+          </Suspense>
+        ),
+      },
+    ],
   },
 ];
 

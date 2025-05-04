@@ -10,5 +10,8 @@ export const ResetPassword = lazy(
   () => import("./auth/forgotPassword/ResetPassword")
 );
 export const ReactivateAccount = lazy(() => import("./auth/reactivate"));
-export const ReactivateAccountSuccess = lazy(() => import("./auth/reactivate/ReactivateAccountSuccess"));
+export const ReactivateAccountSuccess = lazy(
+  () => import("./auth/reactivate/ReactivateAccountSuccess")
+);
 export const VerifyEmail = lazy(() => import("./auth/verifyEmail"));
+export const Home = lazy(() => import("./dashboard"));

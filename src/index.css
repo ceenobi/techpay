@@ -9,6 +9,7 @@
   --paint-gray: #8e8e93;
   --paint-darkGray: #768ba6;
   --paint-black-50: #6d6d6d;
+  --paint-red: #f73f3c;
 }
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
