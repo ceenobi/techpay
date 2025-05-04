@@ -1,34 +1,35 @@
-export const authFields = [
+import {
+  ChartLine,
+  CircleUserRound,
+  FileText,
+  LayoutDashboard,
+  Users,
+} from "lucide-react";
+
+export const dashboardLinks = [
   {
-    label: "First name",
-    type: "text",
-    id: "first_name",
-    name: "first_name",
-    placeholder: "",
-    isRequired: true,
+    icon: LayoutDashboard,
+    label: "Dashboard",
+    path: "/",
   },
   {
-    label: "Last name",
-    type: "text",
-    id: "last_name",
-    name: "last_name",
-    placeholder: "",
-    isRequired: true,
+    icon: FileText,
+    label: "Transactions",
+    path: "/dashboard/transactions",
   },
   {
-    label: "Email",
-    type: "email",
-    id: "email",
-    name: "email",
-    placeholder: "",
-    isRequired: true,
+    icon: ChartLine,
+    label: "Reports",
+    path: "/dashboard/reports",
   },
   {
-    label: "Password",
-    type: "password",
-    id: "password",
-    name: "password",
-    placeholder: "",
-    isRequired: true,
+    icon: Users,
+    label: "User Management",
+    path: "/dashboard/user-management",
+  },
+  {
+    icon: CircleUserRound,
+    label: "Account",
+    path: "/dashboard/account",
   },
 ];
